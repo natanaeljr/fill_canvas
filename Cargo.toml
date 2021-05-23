@@ -1,12 +1,13 @@
 [package]
 name = "fill_canvas"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Natanael J. Rabello <natanaeljrabello@gmail.com>"]
 edition = "2018"
 description = "FillCanvas is a wrapper around a matrix with special methods to fill the cells"
 readme = "README.md"
 license-file = "LICENSE"
 repository = "https://github.com/natanaeljr/fill_canvas"
+documentation = "https://docs.rs/fill_canvas"
 keywords = ["canvas", "matrix", "fill", "row", "column"]
 categories = ["data-structures"]
 
