@@ -32,7 +32,7 @@ impl<T> FillCanvas<T> where T: Default + Clone + PartialEq {
     }
 
     pub fn clear(&mut self) {
-        self.matrix.clear();
+        self.matrix.fill(T::default())
     }
 
     pub fn get(&self, r: usize, c: usize) -> Option<&T> {
