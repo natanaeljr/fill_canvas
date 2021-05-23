@@ -60,7 +60,7 @@ impl<T> FillCanvas<T> where T: Default + Clone + PartialEq {
     }
 
     pub fn fill_col(&mut self, v: T, c: usize) -> Option<()> {
-        self.index(0, c)?; // valvate constrains
+        self.index(0, c)?; // validate constrains
         for r in 0..self.rows {
             let index = self.index_unchecked(r, c);
             self.matrix[index] = v.clone();
@@ -69,9 +69,9 @@ impl<T> FillCanvas<T> where T: Default + Clone + PartialEq {
     }
 
     pub fn fill_area(&mut self, v: T, r0: usize, c0: usize, r1: usize, c1: usize) -> Option<()> {
-        if r1 < r0 || c1 < c0 { return None; } // valvate
-        self.index(r0, c0)?; // valvate
-        self.index(r1, c1)?; // valvate
+        if r1 < r0 || c1 < c0 { return None; } // validate
+        self.index(r0, c0)?; // validate
+        self.index(r1, c1)?; // validate
         for r in r0..=r1 {
             let begin = self.index_unchecked(r, c0);
             let end = self.index_unchecked(r, c1);
