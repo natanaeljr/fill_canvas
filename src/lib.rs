@@ -94,17 +94,13 @@ impl<T> FillCanvas<T> where T: Default + Clone + PartialEq {
 
 impl<T> Display for FillCanvas<T> where T: Clone + Default + Display + PartialEq {
     fn fmt(&self, f: &mut Formatter<'_>) -> std::fmt::Result {
-        f.write_str("Canvas {\n")?;
-        if self.rows > 0 || self.cols > 0 {
-            for r in 0..self.rows {
-                let begin = self.index_unchecked(r, 0);
-                let end = self.index_unchecked(r, self.cols - 1);
-                for index in begin..=end {
-                    write!(f, "{} ", self.matrix[index])?;
-                }
+        f.write_str("FillCanvas {\n")?;
+        for index in 0..self.matrix.len() {
+            if index % self.cols == 0 && index != 0 {
                 f.write_str("\n")?;
             }
+            write!(f, "{} ", self.matrix[index])?;
         }
-        f.write_str("}")
+        f.write_str("\n}")
     }
 }
