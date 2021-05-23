@@ -1,7 +1,7 @@
 FillCanvas
 ===
 
-_\[Utility Rust Create\]_
+_\[Utility Rust Crate\]_
 
 FillCanvas is a wrapper around a matrix with special methods to fill the cells.
 
