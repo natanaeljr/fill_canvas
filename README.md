@@ -3,7 +3,7 @@ FillCanvas
 
 _\[Utility Rust Create\]_
 
-FillCanvas is a wrap around a matrix with special methods to fill the cells.
+FillCanvas is a wrapper around a matrix with special methods to fill the cells.
 
 FillCanvas provides methods to fill individual cells with a value, or multiple cells from a row/column or just all cells
 within an area at once.
