@@ -19,7 +19,7 @@ pub struct FillCanvas<T> {
 }
 
 impl<T> FillCanvas<T> where T: Default + Clone + PartialEq {
-    fn new(rows: usize, cols: usize) -> Self {
+    pub fn new(rows: usize, cols: usize) -> Self {
         let mut matrix = Vec::new();
         matrix.resize(rows * cols, T::default());
         Self { rows, cols, matrix }
