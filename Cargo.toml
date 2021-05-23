@@ -1,0 +1,7 @@
+[package]
+name = "fill_canvas"
+version = "0.1.0"
+authors = ["njr"]
+edition = "2018"
+
+[dependencies]
